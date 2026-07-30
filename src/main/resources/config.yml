@@ -1,0 +1,99 @@
+# UltraSpawn 1.0.0
+
+server:
+  # Unieke naam van deze backendserver, gelijk aan de naam in Velocity/BungeeCord.
+  name: "lobby"
+
+spawn:
+  # Wordt door /setspawn ingevuld.
+  world: ""
+  x: 0.0
+  y: 64.0
+  z: 0.0
+  yaw: 0.0
+  pitch: 0.0
+
+join:
+  teleport-to-spawn: true
+  # Korte vertraging zodat wereld/chunks geladen zijn.
+  delay-ticks: 5
+  only-first-join: false
+
+teleport:
+  delay-seconds: 3
+  cooldown-seconds: 5
+  cancel-on-move: true
+  cancel-on-damage: true
+  movement-tolerance: 0.05
+
+network:
+  enabled: true
+  # NONE, VELOCITY of BUNGEECORD. Beide proxytypen gebruiken het compatibele BungeeCord-kanaal.
+  proxy-type: "VELOCITY"
+  lobby-server: "lobby"
+  # Voor Velocity moet bungee-plugin-message-channel=true zijn.
+
+sounds:
+  enabled: true
+  countdown:
+    sound: "BLOCK_NOTE_BLOCK_HAT"
+    volume: 1.0
+    pitch: 1.0
+  success:
+    sound: "ENTITY_ENDERMAN_TELEPORT"
+    volume: 1.0
+    pitch: 1.0
+  cancelled:
+    sound: "ENTITY_VILLAGER_NO"
+    volume: 1.0
+    pitch: 1.0
+
+particles:
+  enabled: true
+  before:
+    type: "PORTAL"
+    amount: 30
+    offset-x: 0.4
+    offset-y: 0.8
+    offset-z: 0.4
+    speed: 0.1
+  after:
+    type: "REVERSE_PORTAL"
+    amount: 40
+    offset-x: 0.5
+    offset-y: 1.0
+    offset-z: 0.5
+    speed: 0.1
+
+titles:
+  enabled: true
+  countdown:
+    title: "&b{seconds}"
+    subtitle: "&7Blijf stilstaan..."
+    fade-in: 0
+    stay: 25
+    fade-out: 5
+  success:
+    title: "&bWelkom!"
+    subtitle: "&7Je bent bij de spawn."
+    fade-in: 10
+    stay: 40
+    fade-out: 10
+  cancelled:
+    title: "&cGeannuleerd"
+    subtitle: "&7Je teleportatie is gestopt."
+    fade-in: 5
+    stay: 30
+    fade-out: 10
+
+update-checker:
+  enabled: true
+  github:
+    owner: "OWNER"
+    repository: "UltraSpawn"
+  check-on-startup: true
+  notify-console: true
+  notify-operators-on-join: true
+  notify-permission: "ultraspawn.update"
+  include-prereleases: false
+  timeout-seconds: 5

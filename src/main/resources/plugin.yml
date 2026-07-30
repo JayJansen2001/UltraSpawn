@@ -1,0 +1,59 @@
+name: UltraSpawn
+version: '${project.version}'
+main: nl.ultraspawn.UltraSpawnPlugin
+api-version: '1.21'
+author: UltraSpawn
+website: https://github.com/OWNER/UltraSpawn
+description: Spawn and lobby management for Paper, Velocity and BungeeCord networks.
+
+commands:
+  spawn:
+    description: Teleporteer naar de lokale spawn.
+    usage: /spawn
+    permission: ultraspawn.spawn
+  hub:
+    description: Verbind met de centrale lobbyserver.
+    usage: /hub
+    aliases: [lobby]
+    permission: ultraspawn.hub
+  setspawn:
+    description: Stel de lokale spawn in.
+    usage: /setspawn
+    permission: ultraspawn.setspawn
+  ultraspawn:
+    description: UltraSpawn beheer en help.
+    usage: /ultraspawn [help|info|reload|version]
+    aliases: [us]
+    permission: ultraspawn.help
+
+permissions:
+  ultraspawn.spawn:
+    default: true
+  ultraspawn.hub:
+    default: true
+  ultraspawn.help:
+    default: true
+  ultraspawn.version:
+    default: true
+  ultraspawn.setspawn:
+    default: op
+  ultraspawn.info:
+    default: op
+  ultraspawn.reload:
+    default: op
+  ultraspawn.update:
+    default: op
+  ultraspawn.bypass.delay:
+    default: op
+  ultraspawn.bypass.cooldown:
+    default: op
+  ultraspawn.admin:
+    default: op
+    children:
+      ultraspawn.setspawn: true
+      ultraspawn.info: true
+      ultraspawn.reload: true
+      ultraspawn.version: true
+      ultraspawn.update: true
+      ultraspawn.bypass.delay: true
+      ultraspawn.bypass.cooldown: true

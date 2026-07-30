@@ -1,0 +1,44 @@
+prefix: "&8[&bUltraSpawn&8] "
+
+general:
+  no-permission: "&cJe hebt hier geen toestemming voor."
+  players-only: "&cDit commando kan alleen door spelers worden gebruikt."
+  reloaded: "&aUltraSpawn is opnieuw geladen."
+  invalid-subcommand: "&cOnbekend subcommando. Gebruik &f/ultraspawn help&c."
+
+spawn:
+  set: "&aDe spawn is ingesteld op &f{world} {x}, {y}, {z}&a."
+  not-set: "&cEr is op deze server nog geen spawn ingesteld."
+  world-not-found: "&cDe ingestelde spawnwereld '&f{world}&c' bestaat niet."
+
+teleport:
+  countdown: "&7Je wordt over &b{seconds} &7seconde(n) geteleporteerd..."
+  success: "&aJe bent naar de spawn geteleporteerd."
+  cancelled-move: "&cTeleportatie geannuleerd omdat je bewoog."
+  cancelled-damage: "&cTeleportatie geannuleerd omdat je schade kreeg."
+  cooldown: "&cWacht nog &e{seconds} &cseconde(n)."
+  already-teleporting: "&cJe bent al bezig met teleporteren."
+
+network:
+  connecting: "&7Je wordt verbonden met &b{server}&7..."
+  already-in-lobby: "&eJe bent al op de lobbyserver; je gaat naar de lokale spawn."
+  disabled: "&cNetwerkdoorsturen staat uit."
+  failed: "&cVerbinding met de lobbyserver kon niet worden gestart."
+
+update:
+  available: "&eNieuwe versie beschikbaar: &c{current} &7→ &a{latest}&e. &b{url}"
+  latest: "&aJe gebruikt de nieuwste versie (&f{current}&a)."
+  unavailable: "&eDe updatecontrole kon niet worden uitgevoerd."
+
+help:
+  header: "&8&m-----------------------------------------"
+  title: "&b              UltraSpawn &7v{version}"
+  description: "&7Spawn- en lobbybeheer voor jouw netwerk."
+  spawn: "&b/spawn &8- &7Ga naar de spawn van deze server."
+  hub: "&b/hub &8- &7Ga naar de centrale lobbyserver."
+  lobby: "&b/lobby &8- &7Alias van /hub."
+  setspawn: "&b/setspawn &8- &7Stel de lokale spawn in."
+  help: "&b/ultraspawn help &8- &7Toon dit menu."
+  info: "&b/ultraspawn info &8- &7Toon server- en spawninformatie."
+  reload: "&b/ultraspawn reload &8- &7Herlaad config.yml en messages.yml."
+  version: "&b/ultraspawn version &8- &7Toon versie en update-status."
